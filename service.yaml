@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-scraper-service
+spec:
+  selector:
+    app: book-scraper
+  type: NodePort
+  ports:
+    - port: 80          
+      targetPort: 8080  
+      nodePort: 30001   
